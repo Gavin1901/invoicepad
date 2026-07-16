@@ -41,3 +41,8 @@ yarn-error.log*
 next-env.d.ts
 
 *.log
+
+# local archives and backup files
+_local_archive/
+*.bak*
+
