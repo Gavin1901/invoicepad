@@ -19,6 +19,18 @@ export default function TemplatesIndex() {
           template — the right line items, the usual billing model and payment terms — then create a
           professional PDF in the generator. Free, no sign-up, no watermark.
         </p>
+
+        <section className="mt-8 rounded-2xl border border-indigo-200 bg-indigo-50 p-5">
+          <h2 className="text-lg font-bold text-slate-900">Popular invoice templates</h2>
+          <p className="mt-1 text-sm text-slate-600">Start with the templates people are already searching for, then open the generator and save a clean PDF.</p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            <Link href="/seo-service-invoice-template/" className="rounded-xl border border-indigo-100 bg-white p-4 text-sm font-semibold text-indigo-800 hover:border-indigo-300">SEO service invoice template</Link>
+            <Link href="/web-developer-invoice-template/" className="rounded-xl border border-indigo-100 bg-white p-4 text-sm font-semibold text-indigo-800 hover:border-indigo-300">Web developer invoice template</Link>
+            <Link href="/freelance-writer-invoice-template/" className="rounded-xl border border-indigo-100 bg-white p-4 text-sm font-semibold text-indigo-800 hover:border-indigo-300">Freelance writer invoice template</Link>
+            <Link href="/handyman-invoice-template/" className="rounded-xl border border-indigo-100 bg-white p-4 text-sm font-semibold text-indigo-800 hover:border-indigo-300">Handyman invoice template</Link>
+          </div>
+        </section>
+
         <div className="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
           {PROFESSIONS.map((p) => (
             <Link

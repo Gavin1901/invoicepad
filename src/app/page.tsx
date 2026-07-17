@@ -82,10 +82,10 @@ export default function Home() {
           <p className="mt-2 text-sm text-slate-600">Search Console is already showing demand for estimate makers, web development invoices, writing invoices and handyman templates. These links concentrate crawl paths on the pages most likely to turn impressions into clicks.</p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <Link href="/invoice-templates/" className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm font-semibold text-indigo-800 hover:bg-indigo-100">All invoice templates</Link>
-            <Link href="/estimate-generator/" className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm font-semibold text-indigo-800 hover:bg-indigo-100">Free estimate maker</Link>
-            <Link href="/invoice-template/web-developer/" className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm font-semibold text-indigo-800 hover:bg-indigo-100">Web developer invoice</Link>
-            <Link href="/invoice-template/freelance-writer/" className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm font-semibold text-indigo-800 hover:bg-indigo-100">Freelance writer invoice</Link>
-            <Link href="/invoice-template/handyman/" className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm font-semibold text-indigo-800 hover:bg-indigo-100">Handyman invoice</Link>
+            <Link href="/seo-service-invoice-template/" className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm font-semibold text-indigo-800 hover:bg-indigo-100">SEO service invoice template</Link>
+            <Link href="/web-developer-invoice-template/" className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm font-semibold text-indigo-800 hover:bg-indigo-100">Web developer invoice</Link>
+            <Link href="/freelance-writer-invoice-template/" className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm font-semibold text-indigo-800 hover:bg-indigo-100">Freelance writer invoice</Link>
+            <Link href="/handyman-invoice-template/" className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm font-semibold text-indigo-800 hover:bg-indigo-100">Handyman invoice</Link>
             <Link href="/receipt-maker/" className="rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm font-semibold text-indigo-800 hover:bg-indigo-100">Receipt maker</Link>
           </div>
         </section>
