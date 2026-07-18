@@ -20,10 +20,10 @@ export const metadata: Metadata = {
   ...(GSC_TOKEN ? { verification: { google: GSC_TOKEN } } : {}),
   title: {
     template: "%s | 2026 Free Invoice Generator",
-    default: "InvoicePad - Free Invoice Generator for Freelancers",
+    default: "Invoice Templates for Freelancers 2026 | Free Generator",
   },
   description:
-    "Free 2026 invoice generator for freelancers. Create professional PDF invoices in seconds with no sign-up, no watermark, and browser-only privacy.",
+    "Free 2026 invoice templates for SEO services, web developers, freelance writers and handymen. Create PDF invoices and estimates with no sign-up or watermark.",
   keywords: [
     "free invoice generator 2026",
     "invoice maker",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     "online invoice generator",
   ],
   openGraph: {
-    title: "InvoicePad - Free Invoice Generator for Freelancers",
+    title: "Invoice Templates for Freelancers 2026 | Free Generator",
     description:
-      "Make a professional invoice and save it as PDF. Free, no sign-up, no watermark, private. Built for 2026 freelancers.",
+      "Create SEO service, web developer, handyman and freelance writer invoices as PDFs. Free 2026 invoice templates, no sign-up, no watermark.",
     url: "https://invoicepad.net",
     siteName: "InvoicePad",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
