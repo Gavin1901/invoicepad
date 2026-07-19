@@ -28,6 +28,8 @@ export default function TemplatesIndex() {
             <Link href="/web-developer-invoice-template/" className="rounded-xl border border-indigo-100 bg-white p-4 text-sm font-semibold text-indigo-800 hover:border-indigo-300">Web developer invoice template</Link>
             <Link href="/freelance-writer-invoice-template/" className="rounded-xl border border-indigo-100 bg-white p-4 text-sm font-semibold text-indigo-800 hover:border-indigo-300">Freelance writer invoice template</Link>
             <Link href="/handyman-invoice-template/" className="rounded-xl border border-indigo-100 bg-white p-4 text-sm font-semibold text-indigo-800 hover:border-indigo-300">Handyman invoice template</Link>
+            <Link href="/freelancer-invoice-template/" className="rounded-xl border border-indigo-100 bg-white p-4 text-sm font-semibold text-indigo-800 hover:border-indigo-300">Freelancer invoice template</Link>
+            <Link href="/consultant-invoice-template/" className="rounded-xl border border-indigo-100 bg-white p-4 text-sm font-semibold text-indigo-800 hover:border-indigo-300">Consultant invoice template</Link>
           </div>
         </section>
 
