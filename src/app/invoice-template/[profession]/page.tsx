@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { profession } = await params;
   const p = professionBySlug(profession);
   if (!p) return {};
-  const title = `Free 2026 Invoice Template for ${p.name}s — Create & Download PDF (No Sign-Up) (2026)`;
+  const title = `${p.name} Invoice Template — Free PDF Generator`;
   const url = `https://invoicepad.net/invoice-template/${p.slug}`;
   return {
     title,
