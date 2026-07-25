@@ -217,6 +217,15 @@ export default function Home() {
           </p>
         </section>
 
+        <section className="mt-12 rounded-2xl border border-slate-200 bg-white p-6">
+          <h2 className="text-xl font-bold text-slate-900">Freelancer invoicing guides</h2>
+          <div className="mt-3 flex flex-wrap gap-3 text-sm">
+            <Link className="text-indigo-700 underline" href="/blog/how-to-write-an-invoice-freelancer">How to write an invoice</Link>
+            <Link className="text-indigo-700 underline" href="/blog/invoice-payment-terms-explained">Payment terms explained</Link>
+            <Link className="text-indigo-700 underline" href="/blog/what-to-include-on-an-invoice">Invoice checklist</Link>
+          </div>
+        </section>
+
         <section className="mt-12">
           <h2 className="text-xl font-bold text-slate-900">Frequently asked questions</h2>
           <div className="mt-4 space-y-4">
