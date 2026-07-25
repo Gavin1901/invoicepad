@@ -20,6 +20,12 @@ import {
 
 const STORAGE_KEY = "invoicepad_draft_v2";
 
+function track(event: string, params: Record<string, string | number> = {}) {
+  if (typeof window === "undefined") return;
+  const gtag = (window as typeof window & { gtag?: (...args: unknown[]) => void }).gtag;
+  gtag?.("event", event, params);
+}
+
 // 今天 ISO 日期
 function todayISO(): string {
   return new Date().toISOString().slice(0, 10);
@@ -71,6 +77,7 @@ export default function InvoiceTool({ presetItems, presetFrom }: { presetItems?:
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (raw) {
+        track("invoice_draft_reused", { tool: "invoice_generator" });
         const saved = JSON.parse(raw) as Partial<Invoice>;
         setInv((prev) => ({
           ...prev,
@@ -164,6 +171,7 @@ export default function InvoiceTool({ presetItems, presetFrom }: { presetItems?:
   }
 
   function resetDraft() {
+    track("invoice_draft_reset", { tool: "invoice_generator" });
     try {
       localStorage.removeItem(STORAGE_KEY);
     } catch {}
@@ -591,7 +599,15 @@ export default function InvoiceTool({ presetItems, presetFrom }: { presetItems?:
         </label>
 
         <button
-          onClick={() => window.print()}
+          onClick={() => {
+            track("invoice_pdf_started", {
+              tool: "invoice_generator",
+              billing_model: inv.billingModel,
+              currency: inv.currency,
+              line_item_count: displayItems.length,
+            });
+            window.print();
+          }}
           className="mt-5 w-full rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white hover:bg-indigo-700"
         >
           🖨️ Print / Save as PDF
