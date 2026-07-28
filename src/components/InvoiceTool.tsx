@@ -74,29 +74,32 @@ export default function InvoiceTool({ presetItems, presetFrom }: { presetItems?:
 
   // ── 复购钩子：开局带出上次草稿 ──────────────────────────────
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        track("invoice_draft_reused", { tool: "invoice_generator" });
-        const saved = JSON.parse(raw) as Partial<Invoice>;
-        setInv((prev) => ({
-          ...prev,
-          from: saved.from ?? prev.from,
-          currency: (saved.currency as CurrencyCode) ?? prev.currency,
-          notes: saved.notes ?? prev.notes,
-          invoiceNumber: saved.invoiceNumber ? bumpInvoiceNumber(saved.invoiceNumber) : prev.invoiceNumber,
-          taxRate: typeof saved.taxRate === "number" ? saved.taxRate : prev.taxRate,
-          taxCountry: (saved.taxCountry as TaxCountry) ?? prev.taxCountry,
-          billingModel: (saved.billingModel as BillingModelType) ?? prev.billingModel,
-          retainerPeriod: saved.retainerPeriod ?? prev.retainerPeriod,
-          retainerScope: saved.retainerScope ?? prev.retainerScope,
-          date: todayISO(),
-          dueDate: plusDaysISO(14),
-        }));
-      }
-    } catch {}
-    if (presetFrom) setInv((p) => (p.from ? p : { ...p, from: presetFrom }));
-    setLoaded(true);
+    const id = window.setTimeout(() => {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          track("invoice_draft_reused", { tool: "invoice_generator" });
+          const saved = JSON.parse(raw) as Partial<Invoice>;
+          setInv((prev) => ({
+            ...prev,
+            from: saved.from ?? prev.from,
+            currency: (saved.currency as CurrencyCode) ?? prev.currency,
+            notes: saved.notes ?? prev.notes,
+            invoiceNumber: saved.invoiceNumber ? bumpInvoiceNumber(saved.invoiceNumber) : prev.invoiceNumber,
+            taxRate: typeof saved.taxRate === "number" ? saved.taxRate : prev.taxRate,
+            taxCountry: (saved.taxCountry as TaxCountry) ?? prev.taxCountry,
+            billingModel: (saved.billingModel as BillingModelType) ?? prev.billingModel,
+            retainerPeriod: saved.retainerPeriod ?? prev.retainerPeriod,
+            retainerScope: saved.retainerScope ?? prev.retainerScope,
+            date: todayISO(),
+            dueDate: plusDaysISO(14),
+          }));
+        }
+      } catch {}
+      if (presetFrom) setInv((p) => (p.from ? p : { ...p, from: presetFrom }));
+      setLoaded(true);
+    }, 0);
+    return () => window.clearTimeout(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
