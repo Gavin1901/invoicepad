@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
-  title: "Web Developer Invoice Template - Free PDF Generator",
+  title: "Web Development Invoice Template - Free PDF Generator",
   description: "Create a professional web development invoice for websites, app builds, API integrations, maintenance retainers, and bug fixes. Free and private.",
   alternates: { canonical: "https://invoicepad.net/web-developer-invoice-template" },
 };
