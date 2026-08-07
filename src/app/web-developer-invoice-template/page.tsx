@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Page() {
   const lineItems = ['Front-end development', 'API integration', 'Website maintenance', 'Bug fixes', 'Deployment support'];
   const faq = [
-    { q: "Is this web developer invoice template free?", a: "Yes. InvoicePad lets you create a professional PDF invoice for free with no sign-up and no watermark." },
+    { q: "Is this web development invoice template free?", a: "Yes. InvoicePad lets you create a professional PDF invoice for free with no sign-up and no watermark." },
     { q: "What should I include?", a: "Include your business details, client details, invoice number, date, due date, line items, subtotal, tax if needed, total, and payment instructions." },
     { q: "Can I save it as PDF?", a: "Yes. Use the generator and choose Print or Save as PDF in your browser." },
     { q: "Is my invoice data uploaded?", a: "No. InvoicePad runs in your browser. Your invoice data stays on your own device." },
@@ -33,7 +33,7 @@ export default function Page() {
         <nav className="text-sm text-slate-500">
           <Link href="/" className="hover:text-indigo-700">Invoice generator</Link> / <Link href="/invoice-templates/" className="hover:text-indigo-700">Templates</Link>
         </nav>
-        <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-900">Web Developer Invoice Template</h1>
+        <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-900">Web Development Invoice Template</h1>
         <p className="mt-3 text-lg leading-8 text-slate-600">Create a professional web development invoice for websites, app builds, API integrations, maintenance retainers, and bug fixes. Free and private.</p>
         <div className="mt-6 rounded-2xl border border-indigo-200 bg-indigo-50 p-5">
           <p className="text-sm font-semibold text-indigo-900">Fast path</p>
@@ -49,7 +49,7 @@ export default function Page() {
           </div>
         </section>
         <section className="mt-10 prose prose-slate max-w-none">
-          <h2>How to use this web developer invoice template</h2>
+          <h2>How to use this web development invoice template</h2>
           <p>Start with a clear invoice number, issue date, and due date. Add your client details and break every service into its own line item. This makes the invoice easier to approve and reduces back-and-forth before payment.</p>
           <p>For service work, avoid vague descriptions. Instead of writing one generic line like work completed, write the actual deliverable, quantity, rate, and amount. If you charge a retainer, milestone, or fixed project fee, make that billing model clear on the invoice.</p>
           <p>Finish with payment instructions and short notes. Include your preferred payment method, tax ID if required, and late payment terms if you use them. A professional invoice helps clients pay faster because they know exactly what they are paying for and how to pay.</p>
