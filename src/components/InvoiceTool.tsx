@@ -58,8 +58,9 @@ function defaultInvoice(presetItems?: LineItem[]): Invoice {
     notes: "Thank you for your business!",
     currency: "USD",
     invoiceNumber: "INV-0001",
-    date: todayISO(),
-    dueDate: plusDaysISO(14),
+    // Keep the prerendered client component deterministic. Current dates are applied after hydration.
+    date: "",
+    dueDate: "",
     billingModel: "fixed",
     taxCountry: "US",
     milestones: [],
@@ -96,6 +97,9 @@ export default function InvoiceTool({ presetItems, presetFrom }: { presetItems?:
           }));
         }
       } catch {}
+      // Static export HTML may be served on a later date than it was built. Applying dates only
+      // after mount prevents server/client text mismatches while keeping every new invoice current.
+      setInv((prev) => ({ ...prev, date: todayISO(), dueDate: plusDaysISO(14) }));
       if (presetFrom) setInv((p) => (p.from ? p : { ...p, from: presetFrom }));
       setLoaded(true);
     }, 0);
